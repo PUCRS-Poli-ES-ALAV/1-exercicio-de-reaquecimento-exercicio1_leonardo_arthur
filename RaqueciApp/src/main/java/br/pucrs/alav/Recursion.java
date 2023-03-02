@@ -14,4 +14,16 @@ public class Recursion {
     }
     return max + 1/ex3(max - 1);
   }
+
+  public static boolean ex8(String st, int c1, int length){
+    if (c1 == length){
+      return true;
+    }
+    if( st.charAt(c1) != st.charAt(length)){
+      return false;
+    }
+    else{
+      return ex8(st, c1 + 1, length -1);
+    }
+  }
 }
